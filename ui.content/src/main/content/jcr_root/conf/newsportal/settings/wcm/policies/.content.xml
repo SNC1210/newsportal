@@ -343,6 +343,19 @@
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                 </policy>
             </page>
+            <article-page jcr:primaryType="nt:unstructured">
+                <policy_1750871639482
+                    jcr:lastModified="{Date}2025-06-25T22:44:46.418+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Article Template clientlib"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    clientlibs="[newsportal.dependencies,newsportal.site,newsportal.desktop,newsportal.emdesk]"
+                    clientlibsAsync="false"
+                    clientlibsJsHead="newsportal.dependencies">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_1750871639482>
+            </article-page>
         </components>
     </newsportal>
     <wcm jcr:primaryType="nt:unstructured">
