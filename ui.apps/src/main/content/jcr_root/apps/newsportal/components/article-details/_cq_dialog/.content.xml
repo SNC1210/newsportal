@@ -22,6 +22,31 @@
                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                 fieldLabel="Article Title"
                                 name="./articleTitle"/>
+                            <article-type
+                                jcr:description="Select the Article Title Type"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldLabel="Article Title Type"
+                                name="./articleTitleType">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <h1
+                                        jcr:primaryType="nt:unstructured"
+                                        text="H1"
+                                        value="h1"/>
+                                    <h2
+                                        jcr:primaryType="nt:unstructured"
+                                        text="H2"
+                                        value="h2"/>
+                                    <h3
+                                        jcr:primaryType="nt:unstructured"
+                                        text="H3"
+                                        value="h3"/>
+                                    <h4
+                                        jcr:primaryType="nt:unstructured"
+                                        text="H4"
+                                        value="h4"/>
+                                </items>
+                            </article-type>
                             <article-desc
                                 jcr:description="Brief description of the article"
                                 jcr:primaryType="nt:unstructured"
@@ -48,31 +73,6 @@
                                 text="Article Status"
                                 uncheckedValue="false"
                                 value="{Boolean}true"/>
-                            <article-type
-                                jcr:description="Select the Article Title Type"
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
-                                fieldLabel="Article Title Type"
-                                name="./articleTitleType">
-                                <items jcr:primaryType="nt:unstructured">
-                                    <h1
-                                        jcr:primaryType="nt:unstructured"
-                                        text="H1"
-                                        value="h1"/>
-                                    <h2
-                                        jcr:primaryType="nt:unstructured"
-                                        text="H2"
-                                        value="h2"/>
-                                    <h3
-                                        jcr:primaryType="nt:unstructured"
-                                        text="H3"
-                                        value="h3"/>
-                                    <h4
-                                        jcr:primaryType="nt:unstructured"
-                                        text="H4"
-                                        value="h4"/>
-                                </items>
-                            </article-type>
                         </items>
                     </article-basics>
                     <article-adv
@@ -106,25 +106,24 @@
                                 sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
                                 composite="{Boolean}true"
                                 fieldLabel="Related Articles">
-                                    <field
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/coral/foundation/container"
-                                        name="./relatedArticles">
-                                        <items jcr:primaryType="nt:unstructured">
-                                            <article-title
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                                fieldLabel="Article Title"
-                                                name="./articleTitle"/>
-                                            <article-path
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                fieldLabel="Article Path"
-                                                name="./articlePath"/>
-                                        </items>
-                                    </field>
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./relatedArticles">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <article-title
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Article Title"
+                                            name="./articleTitle"/>
+                                        <article-path
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldLabel="Article Path"
+                                            name="./articlePath"/>
+                                    </items>
+                                </field>
                             </related-articles>
-
                         </items>
                     </article-adv>
                 </items>

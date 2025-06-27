@@ -1,3 +1,72 @@
-<h1>AEM Cloud Manager Feature</h1>
-<p><p/>
-<img src="" alt=""/>
+<sly data-sly-use.authorTemplates="author-details.html"></sly>
+<sly data-sly-set.title="${properties.articleTitle}"/>
+<div data-sly-test="${title} || ${properties.articleDesc}" class="article-details">
+        <h1 data-sly-element="${properties.articleTitleType}">${title}</h1>
+        <p>${properties.articleDesc}</p>
+        <img src="${properties.articleImage}" alt="assest jpg file"/>
+</div>
+
+<h4>Calling a template without argument using data-sly-call</h4>
+<div data-sly-call="${authorDetails}"></div>
+
+<h4>Calling a template with argument using data-sly-call</h4>
+<div data-sly-call="${authorDetailsWAr @firstName='suryanarayan',lastName='chandrakar',email='suryanarayan.chandrakar@eastmann.com'   }"></div>
+
+
+<h4>Calling a template with argument using data-sly-call from different html file</h4>
+<div data-sly-call="${authorTemplates.authorDetailsWArDiffFile @firstName='snc',lastName='aadi',email='snc.aadi@eastmann.com'   }"></div>
+
+<div data-sly-test="${properties.articleLabels}" class="article-labels">
+    <h3>Article label with list attribute</h3>
+        <ul data-sly-list="${properties.articleLabels}">
+            <li>${item}</li>
+        </ul>
+</div>
+<div data-sly-test="${properties.articleLabels}" class="article-labelss">
+    <h3>Article label with repeat attribute</h3>
+        <ul data-sly-repeat="${properties.articleLabels}">
+            <li>${item}</li>
+        </ul>
+</div>
+<div data-sly-test="${properties.articleLabels}" class="article-labels">
+    <h3>Article label with list attribute with only top two values</h3>
+        <ul data-sly-list="${properties.articleLabels}">
+            <li class="${itemList.first ? 'la-1':'la'}" data-sly-test="${itemList.count <= 2}">${item}</li>
+        </ul>
+</div>
+<!--creation of template without argument(its same like method in java)-->
+<div data-sly-template.authorDetails>
+    <div class="author-details">
+        <p>First Name: Suryanarayan</p>
+        <p>Last Name: Chandrakar</p>
+        <p>Email: suryanarayan.chandrakar@eastmann.com</p>
+    </div>
+</div>
+
+<!--creation of template with argument(its same like method in java)-->
+<div data-sly-template.authorDetailsWAr = "${@firstName,lastName,email}">
+    <div class="author-detailsWAr">
+        <p>First Name:  ${firstName}</p>
+        <p>Last Name:  ${lastName}</p>
+        <p>Email:    ${email}</p>
+    </div>
+</div>
+ 
+<div data-sly-include="author-details.html"></div>
+<div data-sly-resource="${'button-1' @resourceType='newsportal/components/button'}"></div>
+
+
+<h4>Calling a template without argument using data-sly-call</h4>
+<div data-sly-call="${authorDetails}"></div>
+
+<h4>Calling a template with argument using data-sly-call</h4>
+<div data-sly-call="${authorDetailsWAr @firstName='aditi',lastName='rane',email='aditi.rane@eastmann.com'   }"></div>
+
+<h4>Calling a template with argument using data-sly-call from different html file</h4>
+<div data-sly-call="${authorTemplates.authorDetailsWArDiffFile @firstName='aditi',lastName='aadi',email='aditi.aadi@eastmann.com'   }"></div>
+
+<div>${'yyyy-mm-dd' @format=properties.jcr:created}</div>
+
+<script>
+    let articletitlevalue = "${properties.articleTitle @context='scriptString'}";
+</script>
