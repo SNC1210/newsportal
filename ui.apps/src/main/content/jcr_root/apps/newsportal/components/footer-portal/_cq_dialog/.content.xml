@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Article Details Configuration"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <article-basics
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Article Basics"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <article-title
+                                jcr:description="Title of the article"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Article Title"
+                                name="./articleTitle"/>
+                            <article-type
+                                jcr:description="Select the Article Title Type"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldLabel="Article Title Type"
+                                name="./articleTitleType">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <h1
+                                        jcr:primaryType="nt:unstructured"
+                                        text="H1"
+                                        value="h1"/>
+                                    <h2
+                                        jcr:primaryType="nt:unstructured"
+                                        text="H2"
+                                        value="h2"/>
+                                    <h3
+                                        jcr:primaryType="nt:unstructured"
+                                        text="H3"
+                                        value="h3"/>
+                                    <h4
+                                        jcr:primaryType="nt:unstructured"
+                                        text="H4"
+                                        value="h4"/>
+                                </items>
+                            </article-type>
+                            <article-desc
+                                jcr:description="Brief description of the article"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                fieldLabel="Article Description"
+                                name="./articleDesc"/>
+                            <article-image
+                                jcr:description="Image associated with the article"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="Article Image"
+                                name="./articleImage"/>
+                            <article-imagewithsearch
+                                jcr:description="Image associated with the article image search using path browser"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                fieldLabel="Article Image with path browser"
+                                name="./articleImagewithsearch"/>
+                            <article-status
+                                jcr:description="Brief description of the article status"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                name="./articleStatus"
+                                text="Article Status"
+                                uncheckedValue="false"
+                                value="{Boolean}true"/>
+                        </items>
+                    </article-basics>
+                    <article-adv
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Article Advanced"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <article-expiry
+                                jcr:description="Gives details about article expiry date"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                fieldLabel="Article Expiry Date"
+                                name="./articleExpiry"/>
+                            <article-read-time
+                                jcr:description="Gives details about article read time"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                fieldLabel="Article Read Time"
+                                name="./articleReadTime"/>
+                            <article-labels
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                fieldLabel="Article Labels">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    name="./articleLabels"/>
+                            </article-labels>
+                            <related-articles
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Related Articles">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./relatedArticles">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <article-title
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Article Title"
+                                            name="./articleTitle"/>
+                                        <article-path
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldLabel="Article Path"
+                                            name="./articlePath"/>
+                                    </items>
+                                </field>
+                            </related-articles>
+                        </items>
+                    </article-adv>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

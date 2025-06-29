@@ -1,0 +1,18 @@
+<sly data-sly-use.topBarmodel="com.dlamps.newsportal.core.models.TopBarModel" />
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="tb-contact">
+                            <p><i class="fas fa-envelope"></i>${topBarmodel.email}</p>
+                            <p><i class="fas fa-phone-alt"></i>${topBarmodel.mobile}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="tb-menu" data-sly-list.rightNav="${topBarmodel.rightNav}">
+                            <a href="${rightNav.pagePath @extension='html'}">${rightNav.pageTitle}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
