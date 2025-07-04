@@ -2,7 +2,7 @@
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2025-06-25T14:15:40.549+05:30"
+        cq:lastModified="{Date}2025-07-04T16:09:44.957+05:30"
         cq:lastModifiedBy="admin"
         cq:template="/conf/newsportal/settings/wcm/templates/article-template"
         jcr:primaryType="cq:PageContent"
@@ -15,7 +15,23 @@
             <container
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="newsportal/components/container"
-                layout="responsiveGrid"/>
+                layout="responsiveGrid">
+                <separator
+                    jcr:created="{Date}2025-07-04T16:09:42.707+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2025-07-04T16:09:42.707+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="newsportal/components/separator"/>
+                <experiencefragment
+                    jcr:created="{Date}2025-07-04T16:09:23.317+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2025-07-04T16:09:36.355+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="newsportal/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/newsportal/us/en/site/writer-profile/master"/>
+            </container>
         </root>
     </jcr:content>
 </jcr:root>
