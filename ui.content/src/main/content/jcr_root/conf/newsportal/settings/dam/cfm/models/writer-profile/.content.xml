@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Template"
+    allowedPaths="[/content/entities(/.*)?]"
+    ranking="{Long}100">
+    <jcr:content
+        cq:lastModified="{Date}2025-07-12T23:37:08.530+05:30"
+        cq:lastModifiedBy="admin"
+        cq:scaffolding="/conf/newsportal/settings/dam/cfm/models/writer-profile/jcr:content/model"
+        cq:templateType="/libs/settings/dam/cfm/model-types/fragment"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Writer Profile"
+        sling:resourceSuperType="dam/cfm/models/console/components/data/entity"
+        sling:resourceType="dam/cfm/models/console/components/data/entity/default"
+        status="enabled">
+        <metadata jcr:primaryType="nt:unstructured"/>
+        <model
+            cq:targetPath="/content/entities"
+            jcr:primaryType="cq:PageContent"
+            sling:resourceType="wcm/scaffolding/components/scaffolding"
+            dataTypesConfig="/mnt/overlay/settings/dam/cfm/models/formbuilderconfig/datatypes"
+            maxGeneratedOrder="20">
+            <cq:dialog
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/gui/components/authoring/dialog">
+                <content
+                    jcr:lastModified="{Date}2025-07-12T23:37:08.530+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                    <items
+                        jcr:primaryType="nt:unstructured"
+                        maxGeneratedOrder="20">
+                        <_x0031_752332459979
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="First Name"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="firstName"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_752332459979>
+                        <_x0031_752332485165
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/admin/components/authoring/contenteditor/multieditor"
+                            cfm-element="About Writer"
+                            checked="false"
+                            default-mime-type="text/html"
+                            listOrder="2"
+                            metaType="text-multi"
+                            name="aboutWriter"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string/multiline">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_752332485165>
+                        <_x0031_752332632135
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/datatypes/datepicker"
+                            displayedFormat="YYYY-MM-DD HH:mm"
+                            emptyText="YYYY-MM-DD HH:mm:ss"
+                            fieldLabel="Writer's DOB"
+                            listOrder="5"
+                            metaType="date"
+                            name="writersDob"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            type="datetime"
+                            valueFormat="YYYY-MM-DD[T]HH:mm:ss.000Z"
+                            valueType="calendar/datetime">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                typeHint="Date"/>
+                        </_x0031_752332632135>
+                        <_x0031_752332678732
+                            cq:showOnCreate="true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                            autocreateTag="true"
+                            fieldLabel="Writer's Tags"
+                            forceSelection="false"
+                            listOrder="7"
+                            metaType="tags"
+                            multiple="true"
+                            name="writersTags"
+                            renderReadOnly="false"
+                            rootPath="/content/cq:tags"
+                            showEmptyInReadOnly="true"
+                            valueType="string/tags[]"/>
+                        <_x0031_752332624205
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                            listOrder="4"
+                            metaType="boolean"
+                            name="status"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            text="Status"
+                            valueType="boolean">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_752332624205>
+                        <_x0031_752332800265
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/tabplaceholder"
+                            fieldLabel="Advanced"
+                            listOrder="14"
+                            metaType="tab-placeholder"
+                            name="placeholder"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string/tab"/>
+                        <_x0031_752332656288
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                            emptyOption="{Boolean}true"
+                            emptyText="Select Gender"
+                            fieldLabel="Gender"
+                            listOrder="6"
+                            metaType="enumeration"
+                            name="gender"
+                            renderReadOnly="false"
+                            required="on"
+                            showEmptyInReadOnly="true"
+                            valueType="string/enum">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                            <optionsmultifield jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Male"
+                                    fieldValue="male"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Female"
+                                    fieldValue="female"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Trans-Gender"
+                                    fieldValue="transgender"/>
+                            </optionsmultifield>
+                            <datasource
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="dam/cfm/admin/components/datasources/optionrendererenumeration"
+                                variant="default"/>
+                        </_x0031_752332656288>
+                        <_x0031_752332540540
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                            fieldLabel="Number Of Articles Written"
+                            listOrder="3"
+                            metaType="number"
+                            name="numberOfArticlesWritten"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            step="any"
+                            valueType="double">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_752332540540>
+                        <_x0031_752332710204
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/fragmentreference"
+                            allowNew="{Boolean}true"
+                            fieldLabel="Address"
+                            filter="hierarchy"
+                            fragmentmodelreference="/conf/newsportal/settings/dam/cfm/models/writer-profile"
+                            listOrder="8"
+                            metaType="fragment-reference"
+                            name="address"
+                            nameSuffix="contentReference"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string/content-fragment">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                            <field jcr:primaryType="nt:unstructured"/>
+                        </_x0031_752332710204>
+                        <_x0031_752332755092
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/contentreference"
+                            fieldLabel="Profile Pic"
+                            filter="hierarchy"
+                            listOrder="10"
+                            metaType="reference"
+                            name="profilePic"
+                            nameSuffix="contentReference"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            showThumbnail="false"
+                            valueType="string/reference">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                thumbnail-validation="cfm.validation.thumbnail.show"/>
+                        </_x0031_752332755092>
+                        <_x0031_752332769226
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/admin/components/authoring/contenteditor/jsoneditor"
+                            cfm-element="Additional Data "
+                            fieldDescription="Pass the additional data as JSON object (only  JSON )"
+                            listOrder="13"
+                            metaType="json"
+                            name="additionalData"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string/json"/>
+                    </items>
+                </content>
+            </cq:dialog>
+        </model>
+    </jcr:content>
+</jcr:root>
