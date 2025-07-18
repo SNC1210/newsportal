@@ -43,6 +43,7 @@
                         </goals>
                         <configuration>
                             <bnd><![CDATA[
+Bundle-Activator:com.dlamps.newsportal.core.services.BundleActivatorImpl
 Import-Package: javax.annotation;version=0.0.0,*
                                 ]]></bnd>
                         </configuration>
