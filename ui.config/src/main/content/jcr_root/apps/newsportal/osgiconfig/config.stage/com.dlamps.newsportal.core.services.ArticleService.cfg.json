@@ -1,0 +1,5 @@
+// Configuration created by Apache Sling JCR Installer
+{
+"articleApi":"https://stage.gorest.co.in/public/v2/users",
+"active":"true"    
+}
