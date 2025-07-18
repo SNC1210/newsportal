@@ -1,6 +1,6 @@
 <sly data-sly-use.authorTemplates="author-details.html"></sly>
 <sly data-sly-set.title="${properties.articleTitle}"/>
-<div data-sly-test="${title} || ${properties.articleDesc}" class="article-details">
+<div data-sly-test="${title}" class="article-details">
         <h1 data-sly-element="${properties.articleTitleType}">${title}</h1>
         <p>${properties.articleDesc}</p>
         <img src="${properties.articleImage}" alt="assest jpg file"/>

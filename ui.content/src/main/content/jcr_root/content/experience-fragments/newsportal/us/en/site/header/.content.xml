@@ -8,4 +8,6 @@
         jcr:title="Header"
         sling:resourceType="cq/experience-fragments/components/experiencefragment"/>
     <master/>
+    <NewHeaderVariation/>
+    <new-header-variation-as-variation/>
 </jcr:root>

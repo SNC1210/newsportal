@@ -279,10 +279,13 @@
                 </policy_649128221558427>
                 <policy_1575040440977
                     jcr:description="Allows the template components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
+                    jcr:lastModified="{Date}2025-06-29T20:41:34.704+05:30"
+                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="XF Root"
                     sling:resourceType="wcm/core/components/policy/policy"
-                    components="[group:News Portal - Content,/apps/newsportal/components/form/container]">
+                    components="[group:News Portal - Content,/apps/newsportal/components/form/container,group:News Portal - Structure]"
+                    layoutDisabled="false">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                     <cq:authoring jcr:primaryType="nt:unstructured">
                         <assetToComponentMapping jcr:primaryType="nt:unstructured">
@@ -335,10 +338,13 @@
             <page jcr:primaryType="nt:unstructured">
                 <policy
                     jcr:description="Includes the required client libraries."
+                    jcr:lastModified="{Date}2025-06-29T22:21:43.582+05:30"
+                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
-                    jcr:title="Generic Page"
+                    jcr:title="desktop"
                     sling:resourceType="wcm/core/components/policy/policy"
-                    clientlibs="[newsportal.dependencies,newsportal.site]"
+                    clientlibs="[newsportal.dependencies,newsportal.site,newsportal.desktop]"
+                    clientlibsAsync="false"
                     clientlibsJsHead="newsportal.dependencies">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                 </policy>
@@ -356,6 +362,17 @@
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                 </policy_1750871639482>
             </article-page>
+            <xfpage jcr:primaryType="nt:unstructured">
+                <policy_1751210265245
+                    jcr:lastModified="{Date}2025-06-29T20:49:01.303+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="newsportal policy"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    clientlibs="[newsportal.dependencies,newsportal.site,newsportal.desktop]">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_1751210265245>
+            </xfpage>
         </components>
     </newsportal>
     <wcm jcr:primaryType="nt:unstructured">

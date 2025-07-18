@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-07-04T16:07:26.040+05:30"
+        cq:lastModifiedBy="admin"
+        cq:tags="[experience-fragments:variation/web]"
+        cq:template="/conf/newsportal/settings/wcm/templates/xf-web-variation"
+        cq:xfMasterVariation="{Boolean}true"
+        cq:xfVariantType="web"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Ravi"
+        sling:resourceType="newsportal/components/xfpage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="newsportal/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:created="{Date}2025-07-04T16:02:19.553+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2025-07-04T16:02:19.553+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="newsportal/components/container">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        offset="0"
+                        width="5"/>
+                </cq:responsive>
+                <image
+                    jcr:created="{Date}2025-07-04T16:03:12.825+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2025-07-04T16:07:25.942+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="newsportal/components/image"
+                    fileReference="/content/dam/newsportal/images/news-825x525.jpg"
+                    imageFromPageImage="false"/>
+            </container>
+            <container_1623922816
+                jcr:created="{Date}2025-07-04T16:02:24.953+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2025-07-04T16:02:24.953+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="newsportal/components/container">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        offset="0"
+                        width="7"/>
+                </cq:responsive>
+                <text
+                    jcr:created="{Date}2025-07-04T16:03:19.626+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2025-07-04T16:04:49.569+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="newsportal/components/text"
+                    text="&lt;p>FirstName :&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Ravi&lt;/p>&#xd;&#xa;&lt;p>LastName :&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Madhvan&lt;/p>&#xd;&#xa;&lt;p>Email&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;:&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Rmadhvan@gmail.com&lt;/p>&#xd;&#xa;&lt;p>Address&amp;nbsp; &amp;nbsp; &amp;nbsp;:&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;----------------&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+            </container_1623922816>
+        </root>
+    </jcr:content>
+</jcr:root>

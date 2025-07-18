@@ -1,3 +1,6 @@
-js/main.js
-js/payment.js
-js/article-info.js
+#base=js/newsportal
+jquery-3.4.1.js
+bootstrap.bundle.js
+easing.js
+slick.js
+main.js

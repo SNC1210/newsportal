@@ -1,1 +1,6 @@
-null
+#base=css/newsportal
+bootstrap.css
+all.css
+slick.css
+slick-theme.css
+style.css
