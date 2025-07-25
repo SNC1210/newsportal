@@ -1,6 +1,5 @@
 // Configuration created by Apache Sling JCR Installer
 {
-  "enable.resource.caching":false,
   "servletresolver.paths":[
     "/bin/",
     "/libs/",

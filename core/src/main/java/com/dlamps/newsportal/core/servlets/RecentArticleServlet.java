@@ -2,6 +2,7 @@ package com.dlamps.newsportal.core.servlets;
 
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
+import org.apache.sling.api.servlets.HttpConstants;
 import org.apache.sling.api.servlets.SlingAllMethodsServlet;
 import org.apache.sling.api.servlets.SlingSafeMethodsServlet;
 import org.apache.sling.servlets.annotations.SlingServletPaths;
@@ -15,10 +16,10 @@ import java.io.IOException;
 @Component(service = Servlet.class)
 //@SlingServletPaths(value = {"/newsportal/recent-articles","/newsportal/feature-articles"})
 @SlingServletResourceTypes(
+        resourceTypes = "newsportal/services/recent-articles",
+        methods= {HttpConstants.METHOD_GET,HttpConstants.METHOD_POST},
         extensions = {"json","xml"},
-        selectors = {"recent","popular","featured"},
-        methods = {org.apache.sling.api.servlets.HttpConstants.METHOD_GET,org.apache.sling.api.servlets.HttpConstants.METHOD_POST},
-        resourceTypes = "/newsportal/services/recent-articles"
+        selectors = {"recent","popular","featured"}
 )
 public class RecentArticleServlet extends SlingAllMethodsServlet {
 
