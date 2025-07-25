@@ -17,4 +17,7 @@
         </image>
     </jcr:content>
     <us/>
+    <feature
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="newsportal/services/recent-articles"/>
 </jcr:root>
